@@ -1,5 +1,4 @@
-# DevOps & GitHub Learning Journal 🚀
-
+# DevOps & GitHub Mastery Tracker
 Welcome to my personal learning journal! I am tracking my journey from absolute beginner to advanced DevOps engineer.
 
 ## Phase 1 Goals
