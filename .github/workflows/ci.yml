@@ -1,0 +1,23 @@
+name: CI Learning Pipeline
+
+# This tells GitHub: run this workflow whenever someone pushes code to the main branch
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    # Run this job on a fresh Linux virtual machine managed by GitHub
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Download your repository code onto the virtual machine
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+
+      # Step 2: Run a simple command to prove it works
+      - name: Print a welcome message
+        run: |
+          echo "Hello from GitHub Actions CI/CD!"
+          echo "Current repository files:"
+          ls -la
