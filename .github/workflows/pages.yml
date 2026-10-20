@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ "feature/day-2-practice" ]
+    branches: [ "main" ]
 
 # Grant permissions required to make a GitHub Pages deployment
 permissions:
