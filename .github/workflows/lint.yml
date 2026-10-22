@@ -1,0 +1,23 @@
+name: Code Quality & Linting
+
+on:
+  push:
+    branches: [ "feature/clean-protection-test" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  lint-workflows:
+    name: Lint YAML Files
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Run YAML Linter
+        uses: ibiqlik/action-yamllint@v3
+        with:
+          file_or_dir: .github/workflows/
+          config_data: |
+            rules:
+              line-length: disable
